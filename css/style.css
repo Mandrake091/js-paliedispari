@@ -14,10 +14,10 @@ body {
     height: 100vh;
 }
 
+#buttonPari,#buttonDispari{
+    width: 100px;
+}
 
-
-
-
-.active {
-    display: block;
+#return{
+    margin: 20px;
 }

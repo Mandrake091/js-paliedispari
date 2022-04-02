@@ -12,43 +12,89 @@
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <title>JSnack1</title>
+  <title>JSnack App</title>
 </head>
 
 <body>
 
   <body>
 
-    <div class="d-flex justify-content-center align-items-center" id="app">
+    <div class="" id="app">
+      <button id="return" class="btn btn-primary d-none">Indietro</button>
 
-      <div class="container">
+      <div id="container" class="container ">
 
-        <div class="row align-items-center">
+        <!-- Row Palindroma -->
+        <div id="palindroma" class="row align-items-center d-none">
           <div class="col-12 d-flex justify-content-center">
             <div class="mb-3">
               <label for="exampleFormControlInput1" class="form-label">La parola è palindroma?</label>
               <input type="text" class="form-control" id="input" placeholder="Inserisci una parola">
             </div>
           </div>
-        </div>
 
 
-        <div class="row align-items-center">
-          <div class="col-12 d-flex justify-content-center">
-            <div class="col-auto">
-              <button id="button" type="text" class="btn btn-primary mb-3">Verifica</button>
+          <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="col-auto">
+                <button id="button" type="text" class="btn btn-primary mb-3">Verifica</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div id="colResultPalindroma" class="col-12 d-flex justify-content-center">
+              <h4 id="result"></h4>
             </div>
           </div>
         </div>
+        <!-- Fine row palindroma -->
 
-        <div class="row align-items-center">
+
+
+        <!-- Row Pari Dispari -->
+        <div id="pariDispari" class="row align-items-center d-none">
           <div class="col-12 d-flex justify-content-center">
-            <h1 id="result"></h1>
+            <h6>Vinci se la somma del tuo numero e un numero generato randomicamente è uguale alla tua scelta</h6>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Inserisci un numero da 1 a 5.</label>
+                <input type="text" class="form-control" id="inputNumber" placeholder="Numero">
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="col-auto">
+                <button id="buttonPari" type="text" class="btn btn-primary mb-3">Pari</button>
+                <button id="buttonDispari" type="text" class="btn btn-primary mb-3 ">Dispari</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-12 d-flex justify-content-center">
+              <h4 id="numberResult"></h4>
+            </div>
           </div>
         </div>
+        <!-- Fine row pari dispari -->
+
+
+
+
 
       </div>
     </div>
+
+
+
+
     <script src="script.js"></script>
   </body>
+
 </html>
