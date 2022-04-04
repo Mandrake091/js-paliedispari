@@ -22,7 +22,7 @@ buttonPalindroma.setAttribute('id', 'btnPalindroma');
 const textButtonPalindroma = document.createTextNode("Palindroma?");
 buttonPalindroma.appendChild(textButtonPalindroma);
 //Button return
-const buttonReturn=document.getElementById('return');
+const buttonReturn = document.getElementById('return');
 //Col
 const col = document.createElement('div');
 col.setAttribute('class', 'col-12 text-center');
@@ -31,7 +31,7 @@ col.append(buttonPariDispari);
 col.append(buttonPalindroma);
 
 //
-const colResultPalindroma= document.getElementById('colResultPalindroma')
+const colResultPalindroma = document.getElementById('colResultPalindroma')
 
 
 //Riga 
@@ -46,6 +46,7 @@ appDiv.append(container);
 //Funzione nascondi
 //button pari dispari
 document.getElementById("btnPariDispari").addEventListener("click", displayPariDispari);
+
 function displayPariDispari() {
     containerPariDispari.classList.remove('d-none');
     col.classList.add("d-none");
@@ -53,6 +54,7 @@ function displayPariDispari() {
 }
 //button palindroma
 document.getElementById("btnPalindroma").addEventListener("click", displayPalindroma);
+
 function displayPalindroma() {
     containerPalindroma.classList.remove('d-none');
     col.classList.add("d-none");
@@ -60,7 +62,8 @@ function displayPalindroma() {
 }
 //button return
 document.getElementById('return').addEventListener("click", indietro)
-function indietro(){
+
+function indietro() {
     col.classList.remove("d-none");
     containerPariDispari.classList.add('d-none');
     containerPalindroma.classList.add('d-none');
@@ -76,13 +79,14 @@ let text = document.getElementById('result');
 
 let input = document.getElementById('input');
 
-
 let button = document.getElementById("button").addEventListener("click", giraParola);
-
 
 function giraParola(parola) {
     console.log(input.value);
-    letters = input.value.split('');
+    let par = input.value.toLowerCase();
+    console.log(par)
+    let letters = par.split('');
+
     console.log(letters);
     let parolaGirata = '';
     for (let i = letters.length - 1; i >= 0; i--) {
@@ -90,25 +94,23 @@ function giraParola(parola) {
     }
     console.log(parolaGirata);
 
-    if (input.value == parolaGirata) {
+    if (par == parolaGirata) {
         text.innerText = (`La parola {${input.value}} è palindroma`);
-       
     } else {
         text.innerText = (`La parola  { ${input.value} } non è palindroma`);
-       
     }
     return parolaGirata;
 }
 
-input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function (event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      document.getElementById("button").click();
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("button").click();
     }
-  });
+});
 ////////////////////////
 
 
@@ -118,7 +120,7 @@ input.addEventListener("keyup", function(event) {
 
 let inputNumber = document.getElementById('inputNumber');
 
-let textResult= document.getElementById('numberResult');
+let textResult = document.getElementById('numberResult');
 
 //ButtonDispari
 let buttonDispari = document.getElementById('buttonDispari');
@@ -141,7 +143,7 @@ function isOdd() {
     }
 }
 
-function isEven(){
+function isEven() {
     let randomNumberCpu = Math.floor(Math.random() * 5 + 1);
 
     if (Number(inputNumber.value > 5)) {
@@ -152,7 +154,3 @@ function isEven(){
         textResult.innerText = (`La somma di ${randomNumberCpu} + ${(Number(inputNumber.value))} è Dispari. Hai Perso!`);
     }
 }
-
-
-
-
